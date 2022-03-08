@@ -6,7 +6,8 @@ elle retourne le résultat sous forme d'un nouveau tableau
 la fonction map prend chaque élément d'un tableau
 */ 
 const listkeytouche = touches.map(touches =>touches.dataset.key);
-const ecran = document.querySelectorAll('.ecrant');
+const ecran = document.querySelector('.ecrant');
+
 
 
 document.addEventListener("keydown",(e)=>{
@@ -39,4 +40,8 @@ const calculer =(valeur)=>{
      
     }
 }
+
+window.addEventListener("error",(e)=>{
+    alert("une erreur est survenue dans votre calcul :"+ e.message);
+})
 
